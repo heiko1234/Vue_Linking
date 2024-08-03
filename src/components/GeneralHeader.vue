@@ -1,3 +1,5 @@
+<!-- Header: 45min -->
+
 <template>
   <div class="header">
     <img src="../assets/Apollon.jpeg" alt="Logos" class="logo" />
@@ -13,6 +15,11 @@ export default {
 </script>
 
 <style scoped>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .header {
   background-color: blue;
   display: flex;

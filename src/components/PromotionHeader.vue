@@ -2,17 +2,15 @@
 
 <template>
   <div class="header">
-    <a href="">
-      <img src="../assets/Apollon.jpeg" alt="Logos" class="logo" />
-    </a>
-    <h1 class="title">Header</h1>
+    <h1 class="title">{{ promotion_text }}</h1>
     <!-- <h2 class="subtitle">Subtitle</h2> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'GeneralHeader'
+  name: 'PromotionHeader',
+  props: ['promotion_text']
 }
 </script>
 
@@ -26,32 +24,15 @@ body {
   background-color: blue;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 10px;
   width: 100%;
 }
 
-.logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-.logo:hover {
-  cursor: pointer;
-  transform: scale(1.07);
-  box-shadow: 0 0 10px rgb(252, 250, 250);
-}
-
 .title {
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: white;
-}
-
-.subtitle {
-  text-align: center;
-  font-size: 16px;
-  color: gray;
 }
 </style>

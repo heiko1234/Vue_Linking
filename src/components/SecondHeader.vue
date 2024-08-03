@@ -2,17 +2,14 @@
 
 <template>
   <div class="header">
-    <a href="">
-      <img src="../assets/Apollon.jpeg" alt="Logos" class="logo" />
-    </a>
-    <h1 class="title">Header</h1>
+    <h2 class="title">Sub Header</h2>
     <!-- <h2 class="subtitle">Subtitle</h2> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'GeneralHeader'
+  name: 'SubHeader'
 }
 </script>
 
@@ -23,23 +20,11 @@ body {
 }
 
 .header {
-  background-color: blue;
+  background-color: rgb(225, 0, 255);
   display: flex;
   align-items: center;
   padding: 10px;
   width: 100%;
-}
-
-.logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-.logo:hover {
-  cursor: pointer;
-  transform: scale(1.07);
-  box-shadow: 0 0 10px rgb(252, 250, 250);
 }
 
 .title {

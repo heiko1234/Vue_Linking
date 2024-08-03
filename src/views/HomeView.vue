@@ -1,9 +1,21 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+<template>
+  <div>
+    <GeneralHeader />
+    <!-- Other content for HomeView can go here -->
+  </div>
+</template>
+
+<script>
+import GeneralHeader from '../components/GeneralHeader.vue'
+
+export default {
+  name: 'HomeView',
+  components: {
+    GeneralHeader
+  }
+}
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<style scoped>
+/* Add any scoped styles for HomeView here */
+</style>

@@ -91,7 +91,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .tutorials-container {
   display: block;
   justify-content: center;

@@ -9,6 +9,8 @@
       <ApolloInfo />
       <AboutContent />
       <TutorialsContent />
+      <TeamInfo />
+      <Roadmap />
     </div>
   </div>
 </template>
@@ -22,6 +24,8 @@ import HomeViewHeaderVue from '@/components/HomeViewContent/HomeViewHeader.vue'
 import ApolloInfo from '@/components/HomeViewContent/ApolloInfo.vue'
 import AboutContent from '@/components/HomeViewContent/AboutContent.vue'
 import TutorialsContent from '@/components/HomeViewContent/TutorialsContent.vue'
+import TeamInfo from '@/components/HomeViewContent/TeamContent.vue'
+import Roadmap from '@/components/HomeViewContent/Roadmap.vue'
 
 export default {
   name: 'HomeView',
@@ -32,7 +36,9 @@ export default {
     HomeViewHeaderVue,
     ApolloInfo,
     AboutContent,
-    TutorialsContent
+    TutorialsContent,
+    TeamInfo,
+    Roadmap
   },
   data() {
     return {

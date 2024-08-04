@@ -6,9 +6,9 @@
     <PromotionHeader :promotion_text="promotion_text" />
     <HomeViewHeaderVue />
     <div class="scroll_div">
-      <h1>any content</h1>
       <ApolloInfo />
       <AboutContent />
+      <TutorialsContent />
     </div>
   </div>
 </template>
@@ -21,6 +21,7 @@ import PromotionHeader from '@/components/HomeViewContent/PromotionHeader.vue'
 import HomeViewHeaderVue from '@/components/HomeViewContent/HomeViewHeader.vue'
 import ApolloInfo from '@/components/HomeViewContent/ApolloInfo.vue'
 import AboutContent from '@/components/HomeViewContent/AboutContent.vue'
+import TutorialsContent from '@/components/HomeViewContent/TutorialsContent.vue'
 
 export default {
   name: 'HomeView',
@@ -30,7 +31,8 @@ export default {
     PromotionHeader,
     HomeViewHeaderVue,
     ApolloInfo,
-    AboutContent
+    AboutContent,
+    TutorialsContent
   },
   data() {
     return {
@@ -44,6 +46,7 @@ export default {
 /* Add any scoped styles for HomeView here */
 
 .scroll_div {
-  overflow-y: scroll;
+  height: calc(100vh - 200px); /* Adjust the height as needed */
+  overflow-y: auto;
 }
 </style>

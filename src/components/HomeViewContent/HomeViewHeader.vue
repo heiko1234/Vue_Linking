@@ -10,7 +10,10 @@
 
         <div class="middle_left">
           <button class="middle_left_button">About</button>
+          <button class="middle_left_button">Tutorials</button>
           <button class="middle_left_button">Team</button>
+          <button class="middle_left_button">Roadmap</button>
+          <button class="middle_left_button">FAQ</button>
         </div>
 
         <!-- split left and right -->
@@ -58,7 +61,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: left;
-  margin: 10px;
+  margin: 3px;
   padding: 10px;
   width: 50%;
 }
@@ -67,7 +70,7 @@ body {
   display: flex;
   align-items: left;
   justify-content: left;
-  margin: 10px;
+  margin: 5px;
   padding: 10px;
   width: 50%;
 }

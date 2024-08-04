@@ -5,6 +5,10 @@
     <!-- Other content for HomeView can go here -->
     <PromotionHeader :promotion_text="promotion_text" />
     <HomeViewHeaderVue />
+    <div class="scroll_div">
+      <h1>any content</h1>
+      <AboutContent />
+    </div>
   </div>
 </template>
 
@@ -12,8 +16,9 @@
 // import HomeViewHeaderVue from '@/components/HomeViewHeader.vue'
 // import GeneralHeader from '../components/GeneralHeader.vue'
 // import SubHeader from '../components/SecondHeader.vue'
-import PromotionHeader from '../components/PromotionHeader.vue'
-import HomeViewHeaderVue from '../components/HomeViewHeader.vue'
+import PromotionHeader from '@/components/HomeViewContent/PromotionHeader.vue'
+import HomeViewHeaderVue from '@/components/HomeViewContent/HomeViewHeader.vue'
+import AboutContent from '@/components/HomeViewContent/AboutContent.vue'
 
 export default {
   name: 'HomeView',
@@ -21,7 +26,8 @@ export default {
     // GeneralHeader,
     // SubHeader,
     PromotionHeader,
-    HomeViewHeaderVue
+    HomeViewHeaderVue,
+    AboutContent
   },
   data() {
     return {
@@ -33,4 +39,8 @@ export default {
 
 <style scoped>
 /* Add any scoped styles for HomeView here */
+
+.scroll_div {
+  overflow-y: scroll;
+}
 </style>

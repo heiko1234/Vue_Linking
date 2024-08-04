@@ -7,6 +7,7 @@
     <HomeViewHeaderVue />
     <div class="scroll_div">
       <h1>any content</h1>
+      <ApolloInfo />
       <AboutContent />
     </div>
   </div>
@@ -18,6 +19,7 @@
 // import SubHeader from '../components/SecondHeader.vue'
 import PromotionHeader from '@/components/HomeViewContent/PromotionHeader.vue'
 import HomeViewHeaderVue from '@/components/HomeViewContent/HomeViewHeader.vue'
+import ApolloInfo from '@/components/HomeViewContent/ApolloInfo.vue'
 import AboutContent from '@/components/HomeViewContent/AboutContent.vue'
 
 export default {
@@ -27,6 +29,7 @@ export default {
     // SubHeader,
     PromotionHeader,
     HomeViewHeaderVue,
+    ApolloInfo,
     AboutContent
   },
   data() {

@@ -11,6 +11,7 @@
       <TutorialsContent />
       <TeamInfo />
       <Roadmap />
+      <FAQ />
     </div>
   </div>
 </template>
@@ -26,6 +27,7 @@ import AboutContent from '@/components/HomeViewContent/AboutContent.vue'
 import TutorialsContent from '@/components/HomeViewContent/TutorialsContent.vue'
 import TeamInfo from '@/components/HomeViewContent/TeamContent.vue'
 import Roadmap from '@/components/HomeViewContent/Roadmap.vue'
+import FAQ from '@/components/HomeViewContent/FAQ.vue'
 
 export default {
   name: 'HomeView',
@@ -38,7 +40,8 @@ export default {
     AboutContent,
     TutorialsContent,
     TeamInfo,
-    Roadmap
+    Roadmap,
+    FAQ
   },
   data() {
     return {

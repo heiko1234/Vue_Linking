@@ -72,6 +72,7 @@ export default {
   background-color: transparent;
   border: 1px solid blue;
   min-width: 250px;
+  max-width: 250px;
   max-height: 350px;
   border-radius: 0.5rem;
 }

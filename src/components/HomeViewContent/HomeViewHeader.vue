@@ -20,7 +20,7 @@
       </div>
       <div class="right-section">
         <button class="button">Contact</button>
-        <button class="button">Get Started</button>
+        <button class="button_start">Get Started</button>
       </div>
     </div>
     <div class="separator">
@@ -126,6 +126,26 @@ body {
   font-size: 20px;
   font-weight: bold;
   box-shadow: 0 0 15px rgba(0, 16, 247, 0.685);
+}
+
+.button_start {
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid rgb(6, 43, 255);
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.button_start:hover {
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid rgb(0, 128, 0);
+  box-shadow: 0 0 15px rgba(0, 128, 0, 0.685);
 }
 
 .separator {

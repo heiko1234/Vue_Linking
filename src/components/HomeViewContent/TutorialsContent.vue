@@ -2,6 +2,27 @@
   <!-- make a for loop for all tutorial in tutorials -->
   <div class="tutorials-container">
     <h1 class="tutorial-title">Tutorials</h1>
+
+    <div class="tutorial-controls">
+      <!-- Tutorial control goes here-->
+      <button class="tutorial-control-button">
+        <img
+          class="tutorial-control-button-icon"
+          src="@/assets/arrow_left.png"
+          alt="Tutorial Image"
+          @click="handleTutorialClickleft"
+        />
+      </button>
+      <button class="tutorial-control-button">
+        <img
+          class="tutorial-control-button-icon"
+          src="@/assets/arrow_right.png"
+          alt="Tutorial Image"
+          @click="handleTutorialClickright"
+        />
+      </button>
+    </div>
+
     <div class="tutorial-content">
       <!-- Tutorial content goes here -->
       <TutCard
@@ -10,7 +31,7 @@
         :title="tutorial.title"
         :tag="tutorial.tag"
         :description="tutorial.description"
-        :image="tutorial.image"
+        :src="tutorial.image"
       />
     </div>
   </div>
@@ -31,32 +52,40 @@ export default {
           title: 'Tutorial 1',
           tag: 'Beginner',
           description: 'This is a tutorial for beginners',
-          image: '@/assets/datascience.jpeg'
+          image: 'datascience'
         },
         {
           title: 'Tutorial 2',
           tag: 'Intermediate',
           description: 'This is a tutorial for intermediate users',
-          image: '@/assets/datascience.jpeg'
+          image: 'Apollon4'
         },
         {
           title: 'Tutorial 3',
           tag: 'Advanced',
           description: 'This is a tutorial for advanced users',
-          image: '@/assets/datascience.jpeg'
+          image: 'datascience'
+        },
+        {
+          title: 'Tutorial 4',
+          tag: 'Advanced',
+          description: 'This is a master tutorial for advanced users',
+          image: 'datascience'
         }
       ]
     }
   },
-  mounted() {
-    this.loadImages()
-  },
+
   methods: {
-    loadImages() {
-      this.tutorials.forEach((tutorial) => {
-        const img = new Image()
-        img.src = tutorial.image
-      })
+    handleTutorialClickleft() {
+      console.log('Left button clicked')
+      const tutorialContent = document.querySelector('.tutorial-content')
+      tutorialContent.scrollLeft -= 200 // Adjust the scroll distance as needed
+    },
+    handleTutorialClickright() {
+      console.log('Right button clicked')
+      const tutorialContent = document.querySelector('.tutorial-content')
+      tutorialContent.scrollLeft += 200 // Adjust the scroll distance as needed
     }
   }
 }
@@ -79,11 +108,31 @@ export default {
 
 .tutorial-content {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   padding: 1rem;
   margin: 1rem;
+}
+
+.tutorial-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.tutorial-control-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: rgb(6, 43, 255);
+  margin: 0 1rem;
+  padding: 0.5rem;
+}
+
+.tutorial-control-button-icon {
+  height: 2rem;
+  width: 2rem;
 }
 </style>

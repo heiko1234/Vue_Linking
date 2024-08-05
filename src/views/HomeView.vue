@@ -4,14 +4,31 @@
     <!-- <SubHeader /> -->
     <!-- Other content for HomeView can go here -->
     <PromotionHeader :promotion_text="promotion_text" />
-    <HomeViewHeaderVue />
+    <HomeViewHeaderVue @scroll-to-section="handleScrollToSection" />
     <div class="scroll_div">
-      <ApolloInfo />
-      <AboutContent />
-      <TutorialsContent />
-      <TeamInfo />
-      <Roadmap />
-      <FAQ />
+      <section id="Apollo">
+        <ApolloInfo />
+      </section>
+
+      <section id="About">
+        <AboutContent />
+      </section>
+
+      <section id="Tutorials">
+        <TutorialsContent />
+      </section>
+
+      <section id="Team">
+        <TeamInfo />
+      </section>
+
+      <section id="Roadmap">
+        <Roadmap />
+      </section>
+
+      <section id="FAQ">
+        <FAQ />
+      </section>
     </div>
   </div>
 </template>
@@ -46,6 +63,14 @@ export default {
   data() {
     return {
       promotion_text: 'I can write anything here, that i like to promote'
+    }
+  },
+  methods: {
+    handleScrollToSection(section) {
+      const element = document.getElementById(section)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
     }
   }
 }

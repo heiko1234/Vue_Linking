@@ -9,11 +9,13 @@
         </a>
 
         <div class="middle_left">
-          <button class="middle_left_button">About</button>
-          <button class="middle_left_button">Tutorials</button>
-          <button class="middle_left_button">Team</button>
-          <button class="middle_left_button">Roadmap</button>
-          <button class="middle_left_button">FAQ</button>
+          <button class="middle_left_button" @click="scrollToSection('About')">About</button>
+          <button class="middle_left_button" @click="scrollToSection('Tutorials')">
+            Tutorials
+          </button>
+          <button class="middle_left_button" @click="scrollToSection('Team')">Team</button>
+          <button class="middle_left_button" @click="scrollToSection('Roadmap')">Roadmap</button>
+          <button class="middle_left_button" @click="scrollToSection('FAQ')">FAQ</button>
         </div>
 
         <!-- split left and right -->
@@ -31,7 +33,12 @@
 
 <script>
 export default {
-  name: 'HomeViewHeader'
+  name: 'HomeViewHeader',
+  methods: {
+    scrollToSection(section) {
+      this.$emit('scroll-to-section', section)
+    }
+  }
 }
 </script>
 

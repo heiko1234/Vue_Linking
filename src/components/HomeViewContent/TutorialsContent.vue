@@ -108,10 +108,12 @@ export default {
 
 .tutorial-content {
   display: flex;
+  justify-content: center;
+  width: auto;
   flex-wrap: nowrap;
   overflow-x: auto;
-  padding: 1rem;
-  margin: 1rem;
+  padding: 30px;
+  margin: 100px 0;
 }
 
 .tutorial-controls {

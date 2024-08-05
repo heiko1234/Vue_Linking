@@ -22,7 +22,7 @@
       </div>
       <div class="right-section">
         <button class="button">Contact</button>
-        <button class="button_start">Get Started</button>
+        <button class="button_start" @click="$router.push('/services')">Get Started</button>
       </div>
     </div>
     <div class="separator">

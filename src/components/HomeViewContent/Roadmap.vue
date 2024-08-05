@@ -59,10 +59,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: top;
-  flex-wrap: nowrap;
+  width: auto;
   overflow-x: auto;
-  padding: 1rem;
-  margin: 1rem;
+  padding: 2rem;
+  margin: 50px;
 }
 
 .bucket {

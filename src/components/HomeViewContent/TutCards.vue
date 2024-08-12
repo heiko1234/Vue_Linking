@@ -22,8 +22,6 @@
 <!-- https://vitejs.dev/guide/features.html#static-assets -->
 
 <script>
-import { ref } from 'vue'
-
 export default {
   name: 'TutCard',
   props: {

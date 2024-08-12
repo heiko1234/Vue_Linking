@@ -27,6 +27,7 @@
       <!-- Tutorial content goes here -->
       <TutCard
         v-for="tutorial in tutorials"
+        :key="tutorial.title"
         :tutorial="tutorial"
         :title="tutorial.title"
         :tag="tutorial.tag"
@@ -45,37 +46,7 @@ export default {
   components: {
     TutCard
   },
-  data() {
-    return {
-      tutorials: [
-        {
-          title: 'Tutorial 1',
-          tag: 'Beginner',
-          description: 'This is a tutorial for beginners',
-          image: 'datascience'
-        },
-        {
-          title: 'Tutorial 2',
-          tag: 'Intermediate',
-          description: 'This is a tutorial for intermediate users',
-          image: 'Apollon4'
-        },
-        {
-          title: 'Tutorial 3',
-          tag: 'Advanced',
-          description: 'This is a tutorial for advanced users',
-          image: 'datascience'
-        },
-        {
-          title: 'Tutorial 4',
-          tag: 'Advanced',
-          description: 'This is a master tutorial for advanced users',
-          image: 'datascience'
-        }
-      ]
-    }
-  },
-
+  props: ['tutorials'],
   methods: {
     handleTutorialClickleft() {
       console.log('Left button clicked')
@@ -108,12 +79,11 @@ export default {
 
 .tutorial-content {
   display: flex;
-  justify-content: center;
   width: auto;
   flex-wrap: nowrap;
-  overflow-x: auto;
-  padding: 30px;
-  margin: 100px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 20px 30px;
 }
 
 .tutorial-controls {

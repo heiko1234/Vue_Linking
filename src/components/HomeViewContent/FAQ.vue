@@ -23,18 +23,10 @@
 <script>
 export default {
   name: 'FAQ',
+  props: ['FAQ'],
   data() {
     return {
-      title: 'Frequently Asked Questions',
-      FAQ: [
-        { Question: 'What is Apollon?', Answer: 'Apollon' },
-        { Question: 'How to start?', Answer: "Start by clicking on the 'Get Started' button" },
-        {
-          Question: 'What is the purpose of Apollon?',
-          Answer:
-            'Apollon is a platform for Data Science enthusiasts to learn, share and grow, it is to create and manage all aspects of models, so that the whole data science worklfow and model implementations is covered very effectively.'
-        }
-      ]
+      title: 'Frequently Asked Questions'
     }
   },
   methods: {

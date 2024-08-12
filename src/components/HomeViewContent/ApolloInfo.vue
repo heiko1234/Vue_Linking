@@ -6,10 +6,7 @@
     <div class="InfoContentContainerContent">
       <div class="info-text">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl a lacinia
-          tincidunt, nunc nunc lacinia nunc, nec ultricies nunc nunc auctor nunc. Sed id semper
-          nunc. Sed auctor, nunc a ultrices tincidunt, nunc nunc lacinia nunc, nec ultricies nunc
-          nunc auctor nunc.
+          {{ info_text }}
         </p>
       </div>
       <div class="info-graphic">
@@ -21,6 +18,12 @@
 
 <script>
 export default {
+  props: {
+    info_text: {
+      type: String,
+      required: true
+    }
+  },
   name: 'ApolloInfo'
 }
 </script>

@@ -6,10 +6,7 @@
     <div class="AboutContentContainerContent">
       <div class="about-text">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl a lacinia
-          tincidunt, nunc nunc lacinia nunc, nec ultricies nunc nunc auctor nunc. Sed id semper
-          nunc. Sed auctor, nunc a ultrices tincidunt, nunc nunc lacinia nunc, nec ultricies nunc
-          nunc auctor nunc.
+          {{ about_text }}
         </p>
       </div>
 
@@ -34,6 +31,12 @@ import Apollon4 from '@/assets/Apollon4.jpeg'
 
 export default {
   name: 'AboutInfo',
+  props: {
+    about_text: {
+      type: String,
+      required: true
+    }
+  },
 
   data() {
     return {

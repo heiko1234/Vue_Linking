@@ -2,39 +2,28 @@
   <div class="RoadmapContainer">
     <h1 class="title">{{ title }}</h1>
     <div class="RoadmapContainerContent">
-      <div class="bucket">
-        <h2 class="bucket-title">Now</h2>
-        <ul class="bucket-list">
-          <li v-for="item in now" :key="item">{{ item }}</li>
-        </ul>
-      </div>
-
-      <div class="bucket">
-        <h2 class="bucket-title">Next</h2>
-        <ul class="bucket-list">
-          <li v-for="item in next" :key="item">{{ item }}</li>
-        </ul>
-      </div>
-
-      <div class="bucket">
-        <h2 class="bucket-title">Future</h2>
-        <ul class="bucket-list">
-          <li v-for="item in future" :key="item">{{ item }}</li>
-        </ul>
-      </div>
+      <bucket-component
+        v-for="bucket in roadmap"
+        :key="bucket.title"
+        :bucket_title="bucket.title"
+        :bucket_list="bucket.list"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import BucketComponent from '@/components/HomeViewContent/RoadmapContainer.vue'
+
 export default {
-  name: 'Roadmap',
+  name: 'RoadmapContent',
+  components: {
+    BucketComponent
+  },
+  props: ['roadmap'],
   data() {
     return {
-      title: 'Roadmap',
-      now: ['Landing Page', 'Onboarding Process simplification'],
-      next: ['Data Science Tutorials', 'Data Science Projects', 'Data Science Blog'],
-      future: ['Data Science Community', 'Data Science Marketplace', 'Data Science Platform']
+      title: 'Roadmap'
     }
   }
 }
@@ -57,7 +46,6 @@ export default {
 
 .RoadmapContainerContent {
   display: flex;
-  justify-content: center;
   align-items: top;
   width: auto;
   overflow-x: auto;

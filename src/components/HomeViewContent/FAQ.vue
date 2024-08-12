@@ -3,7 +3,7 @@
     <h1 class="title">{{ title }}</h1>
     <div class="ContainerContent">
       <div class="accordion">
-        <div v-for="(item, index) in FAQ" :key="index" class="accordion-item">
+        <div v-for="(item, index) in faq" :key="index" class="accordion-item">
           <div class="accordion-header" @click="toggleAccordion(index)">
             <div class="accodrion-header-items">
               {{ item.Question }}
@@ -23,7 +23,7 @@
 <script>
 export default {
   name: 'FAQ',
-  props: ['FAQ'],
+  props: ['faq'],
   data() {
     return {
       title: 'Frequently Asked Questions'
@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     toggleAccordion(index) {
-      this.FAQ[index].open = !this.FAQ[index].open
+      this.faq[index].open = !this.faq[index].open
     }
   }
 }

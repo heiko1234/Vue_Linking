@@ -27,7 +27,7 @@
       </section>
 
       <section id="FAQ">
-        <FAQ :FAQ="FAQ" />
+        <FAQ :faq="faq" />
       </section>
     </div>
   </div>
@@ -117,7 +117,7 @@ export default {
           list: ['Data Science Community', 'Data Science Marketplace']
         }
       ],
-      FAQ: [
+      faq: [
         {
           Question: 'What is Apollo?',
           Answer: 'Apollo is a greek god who brought the humans the light'

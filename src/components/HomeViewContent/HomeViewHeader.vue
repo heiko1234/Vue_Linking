@@ -21,7 +21,8 @@
         <!-- split left and right -->
       </div>
       <div class="right-section">
-        <button class="button">Contact</button>
+        <button class="button_header">Other Services</button>
+        <button class="button_header">Contact</button>
         <button class="button_start" @click="$router.push('/services')">Get Started</button>
       </div>
     </div>
@@ -84,7 +85,7 @@ body {
 
 .middle_left_button {
   background-color: transparent;
-  color: grey;
+  color: var(--cyan-10);
   font-size: 16px;
   font-weight: bold;
   border: none;
@@ -112,35 +113,36 @@ body {
   display: flex;
   align-items: center;
   justify-content: right;
-  margin: 30px;
+  margin: 5px 30px;
   width: 50%;
 }
 
-.button {
+.button_header {
   background-color: transparent;
-  color: blue;
+  color: var(--cyan-10);
   font-size: 20px;
   font-weight: bold;
-  border: 2px solid rgb(6, 43, 255);
+  border: 2px solid var(--cyan-10);
   border-radius: 20px;
   padding: 10px 20px;
   margin: 0 5px;
   cursor: pointer;
 }
-.button:hover {
-  background-color: blue;
-  color: white;
+.button_header:hover {
+  background-color: var(--cyan-10);
+  border: 2px solid white;
+  color: var(--cyan-1);
   font-size: 20px;
   font-weight: bold;
-  box-shadow: 0 0 15px rgba(0, 16, 247, 0.685);
+  box-shadow: 0 0 15px var(--cyan-10);
 }
 
 .button_start {
-  background-color: blue;
+  background-color: var(--cyan-10);
   color: white;
   font-size: 20px;
   font-weight: bold;
-  border: 2px solid rgb(6, 43, 255);
+  border: 2px solid var(--cyan-10);
   border-radius: 20px;
   padding: 10px 20px;
   margin: 0 5px;

@@ -21,7 +21,7 @@ body {
 }
 
 .header {
-  background-color: blue;
+  background-color: var(--cyan-10);
   display: flex;
   align-items: center;
   justify-content: center;

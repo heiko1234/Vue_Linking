@@ -1,4 +1,22 @@
 body {
   margin: 0px;
   padding: 0px;
+
+  --cyan-1: #ecfeff;
+  --cyan-2: #cffafe;
+  --cyan-3: #a5f3fc;
+  --cyan-4: #67e8f9;
+  --cyan-5: #22d3ee;
+  --cyan-6: #06b6d4;
+  --cyan-7: #0891b2;
+  --cyan-8: #0e7490;
+  --cyan-9: #155e75;
+  --cyan-10: #164e63;
+  --cyan-11: #083344;
+
+  --gray-1: #f7fafc;
+  --gray-2: #edf2f7;
+
+  --white: #ffffff;
+  --black: #000000;
 }

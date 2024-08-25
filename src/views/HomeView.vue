@@ -7,7 +7,12 @@
     <HomeViewHeaderVue @scroll-to-section="handleScrollToSection" />
     <div class="scroll_div">
       <section id="Apollo">
-        <ApolloInfo :info_text="info_text" />
+        <ApolloInfo
+          :product_title="product_title"
+          :product_subtitle="product_subtitle"
+          :product_shortdescription="product_shortdescription"
+          :info_text="info_text"
+        />
       </section>
 
       <section id="About">
@@ -61,6 +66,9 @@ export default {
   data() {
     return {
       promotion_text: 'I can write anything here, that i like to promote',
+      product_title: 'Apollo',
+      product_subtitle: 'Data Science at Scale',
+      product_shortdescription: 'Use your data to predict the future',
       info_text:
         'This is about the product, i like to promote here. Give general Informaiton about the product here.',
       about_text:

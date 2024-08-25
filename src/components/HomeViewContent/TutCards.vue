@@ -45,13 +45,14 @@ export default {
 .card {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  min-width: 300px;
-  height: 350px;
+  width: 200px;
+  min-width: 200px;
+  height: 250px;
   align-items: center;
+  padding: 20px;
   margin: 5px 20px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
@@ -60,14 +61,14 @@ export default {
 
 .card-tag {
   padding: 4px 8px;
-  background-color: #1900ff;
+  background-color: transparent;
   color: #fff;
   border-radius: 4px;
   align-self: flex-start;
   margin: 8px;
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 12px;
+  left: 12px;
   z-index: 1;
 }
 
@@ -75,11 +76,10 @@ export default {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 12px;
 }
 
 .card-description {
-  margin-top: 16px;
   text-align: center;
 }
 </style>

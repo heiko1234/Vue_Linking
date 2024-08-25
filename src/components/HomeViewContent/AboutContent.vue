@@ -8,13 +8,37 @@
         <p>
           {{ about_text }}
         </p>
+        <p>
+          {{ about_text2 }}
+        </p>
+        <p>
+          {{ about_text3 }}
+        </p>
       </div>
 
       <div class="rightcontent">
         <div class="button-container">
-          <button class="button" @click="changeGraphic('graphic1')">App 1</button>
-          <button class="button" @click="changeGraphic('graphic2')">App 2</button>
-          <button class="button" @click="changeGraphic('graphic3')">App 3</button>
+          <button
+            class="button_about"
+            :class="{ active: selectedButton === 'App 1' }"
+            @click="changeGraphic('graphic1')"
+          >
+            Process Design
+          </button>
+          <button
+            class="button_about"
+            :class="{ active: selectedButton === 'App 2' }"
+            @click="changeGraphic('graphic2')"
+          >
+            Modelling
+          </button>
+          <button
+            class="button_about"
+            :class="{ active: selectedButton === 'App 3' }"
+            @click="changeGraphic('graphic3')"
+          >
+            Prediction Usage
+          </button>
         </div>
         <div class="graphic-container">
           <img :src="selectedGraphic" alt="Graphic" class="graphic" />
@@ -35,32 +59,47 @@ export default {
     about_text: {
       type: String,
       required: true
+    },
+    about_text2: {
+      type: String,
+      required: true
+    },
+    about_text3: {
+      type: String,
+      required: true
     }
   },
 
   data() {
     return {
-      selectedGraphic: ''
+      selectedGraphic: '',
+      selectedButton: ''
     }
   },
   methods: {
     changeGraphic(graphic) {
       if (graphic === 'graphic1') {
         this.selectedGraphic = Apollon2
+        this.setActiveButton('App 1')
       } else if (graphic === 'graphic2') {
         this.selectedGraphic = Apollon3
+        this.setActiveButton('App 2')
       } else if (graphic === 'graphic3') {
         this.selectedGraphic = Apollon4
+        this.setActiveButton('App 3')
       }
+    },
+    setActiveButton(button) {
+      this.selectedButton = button
     }
   },
   mounted() {
-    this.selectedGraphic = Apollon2
+    this.changeGraphic('graphic1')
   }
 }
 </script>
 
-<style>
+<style scoped>
 .AboutContentContainer {
   display: block;
   justify-content: center;
@@ -79,8 +118,10 @@ export default {
 
 .about-title {
   font-size: 2rem;
-  color: rgb(0, 161, 148);
+  color: var(--cyan-10);
   text-align: center;
+  margin: 0.5rem;
+  padding: 0;
 }
 
 .about-text {
@@ -108,23 +149,24 @@ export default {
   margin-bottom: 1rem;
 }
 
-.button {
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.button_about {
   background-color: transparent;
-  color: #333;
+  color: var(--cyan-10);
+  border: 1px solid var(--cyan-10);
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.button.selected {
-  background-color: blue;
+.button_about:hover:not(.active) {
+  background-color: var(--cyan-8);
   color: white;
 }
 
-.button:not(.selected):hover {
-  border-color: blue;
+.button_about.active {
+  background-color: var(--cyan-10);
+  color: white;
 }
 
 .graphic-container {

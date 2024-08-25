@@ -16,7 +16,11 @@
       </section>
 
       <section id="About">
-        <AboutContent :about_text="about_text" />
+        <AboutContent
+          :about_text="about_text"
+          :about_text2="about_text2"
+          :about_text3="about_text3"
+        />
       </section>
 
       <section id="Tutorials">
@@ -73,6 +77,11 @@ export default {
         'This is about the product, i like to promote here. Give general Informaiton about the product here.',
       about_text:
         'Lorem ipsum dolor sit amet, consectatur. Anything about the product itself and its modules. What is possible, what is not possible ',
+      about_text2:
+        'Lorem ipsum dolor sit amet, consectatur. Anything about the product itself and its modules. What is possible, what is not possible ',
+      about_text3:
+        'Lorem ipsum dolor sit amet, consectatur. Anything about the product itself and its modules. What is possible, what is not possible ',
+
       tutorials: [
         {
           title: 'Tutorial 1',

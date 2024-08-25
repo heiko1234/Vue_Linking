@@ -79,13 +79,15 @@ export default {
 }
 
 .info-title {
-  font-size: 3rem;
+  font-size: 4rem;
   color: black;
   text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .subtitle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   color: var(--cyan-10);
@@ -94,7 +96,7 @@ export default {
 }
 
 .shortdescription {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   color: black;
@@ -106,7 +108,7 @@ export default {
   flex: 1;
   padding: 1rem;
   padding-left: 4rem;
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: black;
   display: flex;
   flex-direction: column;
@@ -168,15 +170,15 @@ export default {
   justify-content: center;
   align-items: center;
   margin: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  max-height: 50%;
+  max-width: 50%;
 }
 
 .info-graphic img {
-  max-height: 90%;
-  max-width: 90%;
   width: 70%;
   height: auto;
-  transform: scale(2);
+  transform: scale(1.5);
   border-radius: 20px;
   box-shadow: 0 0 15px var(--cyan-10);
 }

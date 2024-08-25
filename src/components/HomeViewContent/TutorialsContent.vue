@@ -73,8 +73,10 @@ export default {
 
 .tutorial-title {
   font-size: 2rem;
-  color: rgb(6, 43, 255);
+  color: var(--cyan-10);
   text-align: center;
+  padding: 0;
+  margin: 0.5rem;
 }
 
 .tutorial-content {
@@ -98,7 +100,7 @@ export default {
   border: none;
   cursor: pointer;
   font-size: 1.5rem;
-  color: rgb(6, 43, 255);
+  color: var(--cyan-10);
   margin: 0 1rem;
   padding: 0.5rem;
 }

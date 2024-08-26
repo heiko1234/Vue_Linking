@@ -17,13 +17,13 @@ export default {
 }
 </script>
 
-<style scopd>
+<style scoped>
 .bucket {
   display: block;
   padding: 1rem;
   margin: 1rem;
   background-color: transparent;
-  border: 1px solid blue;
+  border: 2px solid var(--cyan-10);
   min-width: 250px;
   max-width: 250px;
   max-height: 350px;
@@ -31,13 +31,17 @@ export default {
 }
 
 .bucket-title {
-  font-size: 1.5rem;
-  color: blue;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--cyan-10);
   text-align: center;
+  padding: 0;
+  margin: 0.5rem;
 }
 
 .bucket-list {
   padding: 10px;
   margin: 10px;
+  font-size: 1.1rem;
 }
 </style>

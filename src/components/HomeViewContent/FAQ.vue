@@ -7,7 +7,11 @@
           <div class="accordion-header" @click="toggleAccordion(index)">
             <div class="accodrion-header-items">
               {{ item.Question }}
-              <img src="@/assets/arrow_down.png" alt="Arrow Down" class="arrow-down" />
+              <img
+                src="@/assets/arrow_down.png"
+                alt="Arrow Down"
+                :class="{ 'arrow-down': true, open: item.open }"
+              />
               <!-- <img :src="item.arrow" alt="Arrow Down" class="arrow-down" /> -->
             </div>
           </div>
@@ -56,7 +60,7 @@ export default {
 
 .title {
   font-size: 2rem;
-  color: rgb(0, 161, 148);
+  color: var(--cyan-10);
   text-align: center;
 }
 
@@ -87,6 +91,13 @@ export default {
   width: 20px;
   height: 20px;
   transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+
+.arrow-down.open {
+  width: 20px;
+  height: 20px;
+  transform: rotate(90deg);
   transition: transform 0.3s;
 }
 

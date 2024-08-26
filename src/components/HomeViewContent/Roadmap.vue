@@ -40,8 +40,11 @@ export default {
 
 .title {
   font-size: 2rem;
-  color: rgb(6, 43, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--cyan-10);
   text-align: center;
+  padding: 0;
+  margin: 0.5rem;
 }
 
 .RoadmapContainerContent {
@@ -51,28 +54,5 @@ export default {
   overflow-x: auto;
   padding: 2rem;
   margin: 50px;
-}
-
-.bucket {
-  display: block;
-  padding: 1rem;
-  margin: 1rem;
-  background-color: transparent;
-  border: 1px solid blue;
-  min-width: 250px;
-  max-width: 250px;
-  max-height: 350px;
-  border-radius: 0.5rem;
-}
-
-.bucket-title {
-  font-size: 1.5rem;
-  color: blue;
-  text-align: center;
-}
-
-.bucket-list {
-  padding: 10px;
-  margin: 10px;
 }
 </style>

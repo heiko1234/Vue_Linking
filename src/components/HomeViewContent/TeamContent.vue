@@ -51,7 +51,7 @@ export default {
 .title {
   font-size: 3rem;
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(0, 161, 148);
+  color: var(--cyan-10);
   text-align: center;
   padding: 0;
   margin: 0.5rem;

@@ -69,6 +69,7 @@ export default {
   },
   data() {
     return {
+      isModalVisible: false,
       promotion_text: 'I can write anything here, that i like to promote',
       product_title: 'Apollo',
       product_subtitle: 'Data Science at Scale',
@@ -154,6 +155,12 @@ export default {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' })
       }
+    },
+    openModal() {
+      this.isModalVisible = true
+    },
+    closeModal() {
+      this.isModalVisible = false
     }
   }
 }

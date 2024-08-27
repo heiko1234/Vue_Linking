@@ -9,8 +9,11 @@
       <p>{{ description }}</p>
     </div>
     <div class="card-controls">
-      <button class="card-control-button">Info</button>
-      <button class="card-control-button">Go To</button>
+      <button class="card-control-button" @click="goToLink">
+        <img class="button_icon" src="" alt="" />
+        Start
+      </button>
+      <!-- <button class="card-control-button">Go To</button> -->
     </div>
   </div>
 </template>
@@ -23,12 +26,18 @@
 <script>
 export default {
   name: 'MateCard',
+  methods: {
+    goToLink() {
+      window.open(this.ref_url)
+    }
+  },
   data() {
     return {
       name: 'Mate',
       description:
         'Data Science is the future of technology. Learn how to use data to make informed decisions.',
-      tag: 'Modelling'
+      tag: 'Modelling',
+      ref_url: 'https://www.google.com'
     }
   }
 }

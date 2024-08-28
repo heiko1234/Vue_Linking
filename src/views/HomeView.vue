@@ -4,7 +4,11 @@
     <!-- <SubHeader /> -->
     <!-- Other content for HomeView can go here -->
     <PromotionHeader :promotion_text="promotion_text" />
-    <HomeViewHeaderVue @scroll-to-section="handleScrollToSection" />
+    <HomeViewHeaderVue
+      @scroll-to-section="handleScrollToSection"
+      @open-contact-modal="toggleModal"
+    />
+    <ContactModal :isModalVisible="isModalVisible" @closeModal="toggleModal" :contacts="contacts" />
     <div class="scroll_div">
       <section id="Apollo">
         <ApolloInfo
@@ -54,6 +58,7 @@ import TutorialsContent from '@/components/HomeViewContent/TutorialsContent.vue'
 import TeamInfo from '@/components/HomeViewContent/TeamContent.vue'
 import RoadmapContent from '@/components/HomeViewContent/Roadmap.vue'
 import FAQ from '@/components/HomeViewContent/FAQ.vue'
+import ContactModal from '@/components/HomeViewContent/ContactModal.vue'
 
 export default {
   name: 'HomeView',
@@ -65,11 +70,13 @@ export default {
     TutorialsContent,
     TeamInfo,
     RoadmapContent,
-    FAQ
+    FAQ,
+    ContactModal
   },
   data() {
     return {
       isModalVisible: false,
+      contacts: 'Contact us at',
       promotion_text: 'I can write anything here, that i like to promote',
       product_title: 'Apollo',
       product_subtitle: 'Data Science at Scale',
@@ -156,11 +163,9 @@ export default {
         element.scrollIntoView({ behavior: 'smooth' })
       }
     },
-    openModal() {
-      this.isModalVisible = true
-    },
-    closeModal() {
-      this.isModalVisible = false
+    toggleModal() {
+      this.isModalVisible = !this.isModalVisible
+      console.log('toggleModal function was used: ', this.isModalVisible)
     }
   }
 }

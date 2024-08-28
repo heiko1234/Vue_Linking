@@ -22,7 +22,7 @@
       </div>
       <div class="right-section">
         <button class="button_header">Other Services</button>
-        <button class="button_header">Contact</button>
+        <button class="button_header" @click="openModal">Contact</button>
         <button class="button_start" @click="$router.push('/services')">Get Started</button>
       </div>
     </div>
@@ -38,6 +38,9 @@ export default {
   methods: {
     scrollToSection(section) {
       this.$emit('scroll-to-section', section)
+    },
+    openModal() {
+      this.$emit('open-contact-modal')
     }
   }
 }

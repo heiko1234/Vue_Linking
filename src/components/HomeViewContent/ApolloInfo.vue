@@ -173,6 +173,7 @@ export default {
   padding-bottom: 20px;
   max-height: 50%;
   max-width: 50%;
+  z-index: 1;
 }
 
 .info-graphic img {
@@ -181,5 +182,6 @@ export default {
   transform: scale(1.5);
   border-radius: 20px;
   box-shadow: 0 0 15px var(--cyan-10);
+  z-index: 1;
 }
 </style>

@@ -8,7 +8,10 @@
       @scroll-to-section="handleScrollToSection"
       @open-contact-modal="toggleModal"
     />
-    <ContactModal :isModalVisible="isModalVisible" @closeModal="toggleModal" :contacts="contacts" />
+    <ContactModal :isModalVisible="isModalVisible" @closeModal="toggleModal">
+      <h1>Contacts</h1>
+      <p>My contacts</p>
+    </ContactModal>
     <div class="scroll_div">
       <section id="Apollo">
         <ApolloInfo
@@ -165,7 +168,7 @@ export default {
     },
     toggleModal() {
       this.isModalVisible = !this.isModalVisible
-      console.log('toggleModal function was used: ', this.isModalVisible)
+      // console.log('toggleModal function was used: ', this.isModalVisible)
     }
   }
 }

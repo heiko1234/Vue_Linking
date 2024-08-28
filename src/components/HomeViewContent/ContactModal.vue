@@ -1,15 +1,8 @@
 <template>
   <div class="modalrapper" v-if="isModalVisible">
-    <div class="backdrop" @click="closeModal">
+    <div class="backdrop" @click.self="closeModal">
       <div class="modal">
-        <header>
-          <h1>Contacts</h1>
-        </header>
-        <section>
-          <p class="content">
-            {{ contacts }}
-          </p>
-        </section>
+        <slot> </slot>
       </div>
     </div>
   </div>
@@ -19,10 +12,6 @@
 export default {
   name: 'ContactModal',
   props: {
-    contacts: {
-      type: String,
-      required: false
-    },
     isModalVisible: {
       type: Boolean,
       required: true
@@ -31,7 +20,7 @@ export default {
   methods: {
     closeModal() {
       this.$emit('closeModal')
-      console.log('toggleModal closeModal: ', this.isModalVisible)
+      // console.log('toggleModal closeModal: ', this.isModalVisible)
     }
   }
 }
